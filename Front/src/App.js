@@ -21,7 +21,7 @@ function App() {
     /* userData를 fetch를 통해 localhost:8000(백엔드)로 전송 */
     try {
 
-      const response = await fetch('http://localhost:8000/users', {
+      const response = await fetch('http://3.39.250.253:8000/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ function App() {
         setPhone('');
 
         /* GET 요청 */
-        const getResponse = await fetch('http://localhost:8000/');
+        const getResponse = await fetch('http://3.39.250.253:8000/');
         if (getResponse.ok) {
           const data = await getResponse.json();
           console.log(data);

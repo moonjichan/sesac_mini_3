@@ -16,8 +16,5 @@ COPY . .
 # 6. 환경 변수 설정
 ENV PYTHONUNBUFFERED=1
 
-# 7. 데이터베이스 초기화
-RUN python -c "from connection import reset_db; reset_db()"
-
-# 8. FastAPI 서버 실행
+# 7. FastAPI 서버 실행
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
